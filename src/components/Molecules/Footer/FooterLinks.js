@@ -8,7 +8,7 @@ import logolight from "../../../assets/images/logo-light.png";
 const FooterLinks = () => {
   return (
     <Fragment>
-      <section className="bg-primary py-3">
+      <section className="bg-success py-3">
         <Container>
           <Row>
             <Col lg={12}>

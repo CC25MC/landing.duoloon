@@ -524,7 +524,7 @@ $value in $colors {
             color: $body-color;
             padding: .6rem 1.4rem;
             &.active{
-                background-color: $primary;
+                background-color: $success;
             }
         }
     }
@@ -557,7 +557,7 @@ $value in $colors {
 *******************/
 
 .footer {
-    background-color: $footer-bg;
+    background-color: $primary;
     color: rgba($white, 0.5);
     padding-top: 80px;
     padding-bottom: 40px;

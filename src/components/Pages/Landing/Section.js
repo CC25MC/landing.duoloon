@@ -1,51 +1,52 @@
 import { Fragment } from "react";
-import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
-
+import { Container, Row, Col, NavLink } from "reactstrap";
+import { COPY } from "../../../copy";
 //Import Images
-import bg1 from "../../../assets/images/bg-1.png";
-import homeImg from "../../../assets/images/home-img.png";
+import homeImg from "../../../assets/images/megafono.png";
 
 const Section = () => {
   return (
     <Fragment>
-      <section
-        className="hero-section"
-        id="home"
-        style={{ background: `url(${bg1}) center center` }}
-      >
+      <section className="hero-section" id="home">
         <Container>
           <Row className="justify-content-center">
-            <Col lg={6}>
+            <Col lg={7}>
               <div className="hero-wrapper mb-4">
-                <p className="font-16 text-uppercase">Discover Invoza Today</p>
+                <p className="font-16 text-uppercase">
+                  {COPY["home.section.subtitle.intro"]}
+                </p>
                 <h1 className="hero-title mb-4">
-                  Make your Site Amazing & Unique with{" "}
-                  <span className="text-primary">Invoza</span>
+                  {COPY["home.section.title1"]}
+                  <span className="text-primary">
+                    {COPY["home.section.title2"]}
+                  </span>
                 </h1>
 
-                <p>
-                  To an English person, it will seem like simplified English, as
-                  a skeptical Cambridge friend of mine occidental
-                </p>
+                <p>{COPY["home.section.description"]}</p>
 
                 <div className="mt-4">
-                  <Link to="#" className="btn btn-primary mt-2 mr-2">
-                    Get Started
-                  </Link>
-                  <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">
+                  <NavLink
+                    href={"#services"}
+                    className="btn btn-primary mt-2 mr-2"
+                    style={{ width: "200px" }}
+                  >
+                    {" "}
+                    {COPY["home.section.button"]}
+                  </NavLink>
+                  {/* <Link to="#" className="btn btn-success mt-2 mr-2 ml-1">
                     Learn more
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </Col>
 
-            <Col lg={6} sm={8}>
+            <Col lg={5} sm={8}>
               <div className="mt-5 mt-lg-0">
                 <img
                   src={homeImg}
-                  alt=""
+                  alt="Megafono"
                   className="img-fluid mx-auto d-block"
+                  style={{ marginTop: "-50px" }}
                 />
               </div>
             </Col>

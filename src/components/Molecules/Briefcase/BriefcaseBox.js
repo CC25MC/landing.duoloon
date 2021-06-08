@@ -1,14 +1,22 @@
 import { Fragment } from "react";
 import { Card, CardBody, Media } from "reactstrap";
 
-const ClientBox = ({ clients }) => {
+const BriefcaseBox = ({ clients }) => {
   return (
     <Fragment>
       {clients.map((client, key) => (
         <div key={key} className="item">
           <Card>
             <CardBody className="p-4">
-              <p className="mb-4">" {client.desc} "</p>
+              <div className="mt-lg-0">
+                <img
+                  src={client.img}
+                  alt={client.img}
+                  className=" mx-auto "
+                  
+                  style={{height:"300px", width: "300px",}}
+                />
+              </div>
               <Media className="pt-3">
                 <div className="avatar-md mr-3">
                   <span className="avatar-title rounded-circle bg-soft-primary text-primary font-16">
@@ -24,7 +32,7 @@ const ClientBox = ({ clients }) => {
                   <i className="mdi mdi-star text-warning ml-1"></i>
                   <i className="mdi mdi-star text-warning ml-1"></i>
                   <i className="mdi mdi-star text-warning ml-1"></i>
-                  <i className="mdi mdi-star ml-1"></i>
+                  <i className="mdi mdi-star text-warning ml-1"></i>
                 </div>
               </Media>
             </CardBody>
@@ -35,4 +43,4 @@ const ClientBox = ({ clients }) => {
   );
 };
 
-export default ClientBox;
+export default BriefcaseBox;

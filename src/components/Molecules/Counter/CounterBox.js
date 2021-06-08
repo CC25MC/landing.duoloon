@@ -12,7 +12,7 @@ const CounterBox = ({ counters }) => {
             <i>
               <FeatherIcon
                 icon={counter.icon}
-                className="icon-dual-success icons-lg"
+                className="icon-dual-white icons-lg"
               />
             </i>
             <h2 className="counter-value text-white mt-4">

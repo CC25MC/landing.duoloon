@@ -2,29 +2,30 @@ import { Fragment, useState, useEffect } from "react";
 import {
   Header,
   Service,
-  Features,
-  Clients,
+  // Features,
+  Briefcase,
   Pricing,
   Subscribe,
   Footer,
 } from "../../../components";
+import { COPY } from "../../../copy";
 import Section from "./Section";
 
 export const Landing = () => {
   const navItems = [
-    { id: 1, idnm: "home", navheading: "Home" },
-    { id: 2, idnm: "services", navheading: "Services" },
-    { id: 3, idnm: "features", navheading: "Features" },
-    { id: 4, idnm: "clients", navheading: "Clients" },
-    { id: 5, idnm: "pricing", navheading: "Plans" },
-    { id: 6, idnm: "aboutUs", navheading: "About Us" },
+    { id: 1, idnm: "home", navheading: COPY["home"] },
+    { id: 2, idnm: "services", navheading: COPY["services"]  },
+    // { id: 3, idnm: "features", navheading: COPY["features"]  },
+    { id: 3, idnm: "pricing", navheading: COPY["pricing"]  },
+    { id: 4, idnm: "briefcase", navheading: COPY["briefcase"]  },
+    { id: 5, idnm: "aboutUs", navheading: COPY["aboutUs"]  },
 
   ];
   const [imglight, setImglight] = useState(false);
   const [navClass, setNavClass] = useState("");
 
   useEffect(() => {
-    const pos = document.documentElement.scrollTop;
+    const pos = 0;
     const scrollNavigation = () => {
       var scrollup = document.documentElement.scrollTop;
       if (scrollup > pos) {
@@ -49,11 +50,11 @@ export const Landing = () => {
       {/* Importing Service */}
       <Service />
 
-      <Features />
-
-      <Clients />
+      {/* <Features /> */}
 
       <Pricing />
+
+      <Briefcase />
 
       <Subscribe />
 

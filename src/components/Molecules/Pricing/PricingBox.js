@@ -20,7 +20,7 @@ const PricingBox = ({ pricings }) => {
               </h1>
 
               <div>
-                <Link to="#" className="btn btn-primary">
+                <Link to="#" className="btn btn-success">
                   Join now
                 </Link>
               </div>

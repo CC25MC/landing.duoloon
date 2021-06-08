@@ -8,8 +8,11 @@ import {
   NavLink,
   Container,
   Collapse,
-  Button,
+  // Button,
 } from "reactstrap";
+import { Link } from "react-router-dom";
+import { COPY } from "../../../copy";
+
 import ScrollspyNav from "./scrollSpy";
 
 import logolight from "../../../assets/images/logo-light.png";
@@ -58,9 +61,12 @@ export const Header = ({ navClass, imglight, navItems }) => {
                   </NavItem>
                 ))}
               </Nav>
-              <Button color="success" className="btn-rounded navbar-btn">
+              <Link to="#" className="btn btn-primary btn-rounded">
+                {COPY["nav.button"]}
+              </Link>
+              {/* <Button color="success" className="btn-rounded navbar-btn">
                 Try for Free
-              </Button>
+              </Button> */}
             </ScrollspyNav>
           </Collapse>
         </Container>
